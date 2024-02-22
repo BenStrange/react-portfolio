@@ -15,7 +15,7 @@ function Portfolio() {
 
     const getData = async () => {
         try {
-            const portfolioResponse = await axios.get('/portfolio');
+            const portfolioResponse = await axios.get(`${process.env.REACT_APP_DJANGO_API_URL}/portfolio/`);
             setPortfolio(portfolioResponse.data.results || []);
         } catch (error) {
             console.error("Error fetching data:", error);

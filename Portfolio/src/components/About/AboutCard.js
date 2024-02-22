@@ -9,7 +9,7 @@ function AboutCard() {
   useEffect(() => {
     const getData = async () => {
       try {
-          const response = await axios.get('/about'); // Ensure the URL matches your API endpoint
+          const response = await axios.get(`${process.env.REACT_APP_DJANGO_API_URL}/about/`); // Ensure the URL matches your API endpoint
           setAboutSections(response.data.results || []); // Adjust according to your response structure
       } catch (error) {
           console.error("Error fetching data:", error);

@@ -14,7 +14,7 @@ const ToolstackRef = useRef(null);
 
 const getData = async () => {
     try {
-        const ToolstackResponse = await axios.get('/toolstack');
+        const ToolstackResponse = await axios.get(`${process.env.REACT_APP_DJANGO_API_URL}/toolstack/`);
         setToolstack(ToolstackResponse.data.results || []);
     } catch (error) {
         console.error("Error fetching data:", error);
