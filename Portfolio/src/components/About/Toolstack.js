@@ -1,48 +1,37 @@
-import React, { useState, useEffect, useRef } from "react";
-import axios from 'axios';
+import React from "react";
 import { Col, Row, OverlayTrigger, Tooltip } from "react-bootstrap";
-import * as Icons from 'react-icons/di';
+import { DiAws, DiGithub, DiVisualstudio, DiDocker, DiPostgres } from "react-icons/di";
+import { SiRancher, SiTeamcity, SiClickhouse } from "react-icons/si";
 
-function Toolstack() {
-  const [Toolstack, setToolstack] = useState([]);
+function ToolStackComponent() {
+    const toolStack = [
 
-  useEffect(() => {
-    getData();
-}, []);
+        { Icon: DiAws, name: "AWS (S3, EC2)", experience: "2 Year - AWS - (S3, EC2)" },
+        { Icon: DiGithub, name: "GitHub", experience: "3 Years - GitHub" },
+        { Icon: DiVisualstudio, name: "Visual Studio", experience: "3 Years - Visual Studio" },
+        { Icon: DiDocker, name: "Docker", experience: "3 Years - Docker" },
+        { Icon: SiRancher, name: "Rancher", experience: "3 Years - Rancher" },
+        { Icon: SiTeamcity, name: "TeamCity", experience: "1 Year - TeamCity" },
+        { Icon: SiClickhouse, name: "Clickhouse", experience: "2 Years - Clickhouse" },
 
-const ToolstackRef = useRef(null);
 
-const getData = async () => {
-    try {
-        const ToolstackResponse = await axios.get(`${process.env.REACT_APP_DJANGO_API_URL}/toolstack/`);
-        setToolstack(ToolstackResponse.data.results || []);
-    } catch (error) {
-        console.error("Error fetching data:", error);
-    }
-};
+    ];
 
-return (
-  <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-    {Toolstack.map((tool) => {
-      const IconComponent = Icons[tool.icon_name];
-      return (
-        <OverlayTrigger
-          key={tool.id}
-          placement="bottom"
-          overlay={
-            <Tooltip id={`tooltip-top-${tool.id}`}>
-              {tool.description || 'No description'}
-            </Tooltip>
-          }
-        >
-          <Col xs={4} md={2} className="tech-icons">
-            {IconComponent ? <IconComponent /> : <p>Icon not found</p>}
-          </Col>
-        </OverlayTrigger>
-      );
-    })}
-  </Row>
-);
+    return (
+        <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+            {toolStack.map((tool, index) => (
+                <OverlayTrigger
+                    key={index}
+                    placement="bottom"
+                    overlay={<Tooltip id={`tooltip-${index}`}>{tool.experience}</Tooltip>}
+                >
+                    <Col xs={4} md={2} className="tech-icons">
+                        <tool.Icon />
+                    </Col>
+                </OverlayTrigger>
+            ))}
+        </Row>
+    );
 }
 
-export default Toolstack;
+export default ToolStackComponent;

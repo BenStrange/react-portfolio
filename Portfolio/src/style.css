@@ -14,9 +14,7 @@ html {
   --imp-text-color: #b3b0b5;
 }
 
-.purple {
-  color: var(--imp-text-color) !important;
-}
+
 
 button:focus {
   box-shadow: none !important;
@@ -57,7 +55,7 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2d1950;
+  background: #ffffff;
 }
 
 /* Handle */
@@ -448,7 +446,7 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background-image: var(--section-background-color), url(./Assets/home-bg.jpg) !important;
 }
 
 .project-card {
@@ -546,21 +544,22 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background-image: var(--section-background-color), url(./Assets/home-bg.jpg) !important;
   color: white !important;
 }
+
 
 .tech-icons {
   font-size: 4.5em !important;
   margin: 15px !important;
   padding: 10px !important;
   opacity: 0.93 !important;
-  border: 1.7px solid rgba(143, 143, 143, 0.637) !important;
+  border: 1.7px solid rgba(255, 255, 255, 0.637) !important;
   vertical-align: middle !important;
   text-align: center !important;
   border-radius: 5px !important;
   display: table !important;
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  box-shadow: 4px 5px 4px 3px rgba(255, 255, 255, 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
 }
@@ -593,11 +592,7 @@ button:focus {
   padding-left: 1px !important;
 }
 
-@media (max-width: 767px) {
-  .about-img {
-    padding-top: 0 !important;
-  }
-}
+
 /* --------- */
 /* Resume */
 /* --------- */
@@ -606,7 +601,7 @@ button:focus {
   position: relative !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background-image: var(--section-background-color), url(./Assets/home-bg.jpg) !important;
   color: white !important;
 }
 
@@ -757,6 +752,7 @@ button:focus {
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px 0;
+  background-image: var(--section-background-color), url(./Assets/home-bg.jpg) !important;
 }
 
 .credit-item {
@@ -777,3 +773,53 @@ button:focus {
   position: relative !important;
   padding-inline-start: 0 !important;
 }
+
+
+/* ----------- */
+/* Admin Forms */
+/* ----------- */
+
+.adminForm {
+  color: black !important;
+  background-image: var(--section-background-color), url(./Assets/home-bg.jpg) !important;
+}
+
+
+/* ----------- */
+/* Home Circle */
+/* ----------- */
+.circle-animation {
+  transition: stroke-dashoffset 0.5s ease-out;
+}
+
+.circle-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.circle-background {
+  fill: none;
+  stroke: #d9d9d9; /* Trail color */
+}
+
+.circle-progress {
+  fill: none;
+  stroke: purple; /* Progress color */
+  transition: stroke-dashoffset 0.5s linear; /* Smooth the transition of the progress bar */
+}
+
+.circle-timer-text {
+  fill: white; /* Text color */
+  font-weight: bold; /* Bold text */
+  font-size: 0.7em; /* Adjust font size as needed */
+}
+
+.circle-label {
+  margin-top: 5px; /* Spacing between the circle and label */
+  color: white; /* Label text color */
+  font-size: 0.7em; /* Adjust label font size as needed */
+  /* Additional label styling if needed */
+}
+

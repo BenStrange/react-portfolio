@@ -1,51 +1,41 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, OverlayTrigger, Tooltip } from "react-bootstrap";
 import Particle from "../Particle";
 import Github from "./Github";
-import Techstack from "./Techstack";
+import SkillSet from "./SkillSet";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
+import rhosImg from "../../Assets/rhos_on_sea.jpg";
 
 function About() {
   return (
     <Container fluid className="about-section">
       <Particle />
       <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
-          <Col
-            md={7}
-            style={{
-              justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
-            }}
-          >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Who am I?
-            </h1>
+        <Row className="justify-content-center align-items-center">
+          <Col md={7}>
+            <h1 className="heading">Who am I?</h1>
             <Aboutcard />
           </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+          <Col style={{ padding:'2px', zIndex:'2', position:'relative'}}>
+          <a href="https://maps.app.goo.gl/w9u6zRRjqSxyNKu19" target="_blank" rel="noopener noreferrer">
+          <OverlayTrigger
+            placement="bottom"
+            overlay={<Tooltip id="tooltip-rhos">Click to view location</Tooltip>}
+            >
+            <img src={rhosImg} alt="From Rhos on Sea" className="img-fluid" />
+            </OverlayTrigger>
+            </a>
           </Col>
         </Row>
-        <h1 className="project-heading">
-          Professional Skillset
-        </h1>
-
-        <Techstack />
-
-        <h1 className="project-heading">
-          Tools I use
-        </h1>
-        
-        <Toolstack />
-
+        <Row>
+          <h1 className="project-heading">Professional Skillset</h1>
+          <SkillSet />
+        </Row>
+        <Row>
+          <h1 className="project-heading">Tools I use</h1>
+          <Toolstack />
+        </Row>
         <Github />
       </Container>
     </Container>

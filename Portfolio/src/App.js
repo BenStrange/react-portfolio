@@ -8,6 +8,8 @@ import Footer from "./components/Footer";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Credits from "./components/Credits/Credits";
 import Blogs from "./components/Blogs/Blogs";
+import AdminPage from "./components/Admin/Admin";
+import Contact from "./components/Contact/Contact";
 import {
   BrowserRouter as Router,
   Route,
@@ -44,6 +46,8 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/credits" element={<Credits />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
