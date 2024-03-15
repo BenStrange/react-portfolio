@@ -18,7 +18,7 @@ function About() {
             <Aboutcard />
           </Col>
           <Col style={{ padding:'2px', zIndex:'2', position:'relative'}}>
-          <a href="https://maps.app.goo.gl/w9u6zRRjqSxyNKu19" target="_blank" rel="noopener noreferrer">
+            <a href="https://maps.app.goo.gl/w9u6zRRjqSxyNKu19" target="_blank" rel="noopener noreferrer">
           <OverlayTrigger
             placement="bottom"
             overlay={<Tooltip id="tooltip-rhos">Click to view location</Tooltip>}

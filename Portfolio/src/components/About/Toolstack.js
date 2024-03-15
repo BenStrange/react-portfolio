@@ -13,8 +13,6 @@ function ToolStackComponent() {
         { Icon: SiRancher, name: "Rancher", experience: "3 Years - Rancher" },
         { Icon: SiTeamcity, name: "TeamCity", experience: "1 Year - TeamCity" },
         { Icon: SiClickhouse, name: "Clickhouse", experience: "2 Years - Clickhouse" },
-
-
     ];
 
     return (
