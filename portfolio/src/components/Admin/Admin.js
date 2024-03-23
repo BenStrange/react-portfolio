@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Container, Row, Col, Button, Card, Modal } from 'react-bootstrap';
-import { fetchData, updateData, deleteData, fetchOptions, postData } from '../../components/apiService';
+import { fetchData, updateData, deleteData, fetchOptions, postData } from '../apiService';
 import DynamicForm from './DynamicForm';
 import LoginForm from '../LoginForm/LoginForm';
 import useAuth from '../../hooks/useAuth';

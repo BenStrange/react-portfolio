@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row, OverlayTrigger, Tooltip } from "react-bootstrap";
-import { DiAws, DiGithub, DiVisualstudio, DiDocker, DiPostgres } from "react-icons/di";
+import { DiAws, DiGithub, DiVisualstudio, DiDocker } from "react-icons/di";
 import { SiRancher, SiTeamcity, SiClickhouse } from "react-icons/si";
 
 function ToolStackComponent() {

@@ -24,7 +24,7 @@ function PortfolioComponent() {
                                 isBlog={false}
                                 title={project.title}
                                 description={project.description}
-                                ghLink={project.githubLink}
+                                ghLink={project.ghLink}
                             />
                         </Col>
                     ))}
